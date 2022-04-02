@@ -18,7 +18,7 @@ function Table.intersect(Table1 , Table2)
 
 end
 
-function Table.inTable(Variable , TableToCheck)
+function Table.in(Variable , TableToCheck)
 
     for Key,Value in pairs(TableToCheck) do
         
@@ -32,7 +32,7 @@ function Table.inTable(Variable , TableToCheck)
 
 end
 
-function Table.tableFlip(Table)
+function Table.flip(Table)
 
     -- be careful when using this method
     -- in lua table functions like "table.getn" for example do not work with associative tables
@@ -47,7 +47,7 @@ function Table.tableFlip(Table)
 
 end
 
-function Table.tableMerge(Table1, Table2)
+function Table.merge(Table1, Table2)
 
     local MergedTable = {}
 
@@ -60,7 +60,7 @@ function Table.tableMerge(Table1, Table2)
     return MergedTable
 end
 
-function Table.tableFilter(Table)
+function Table.filter(Table)
 
     local FilteredTable = {}
     local Hash = {}
