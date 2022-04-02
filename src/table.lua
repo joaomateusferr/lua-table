@@ -32,4 +32,19 @@ function Table.inTable(Variable , TableToCheck)
 
 end
 
+function Table.tableFlip(Table)
+
+    -- be careful when using this method
+    -- in lua table functions like "table.getn" for example do not work with associative tables
+
+    local FlipedTable = {}
+
+    for Key,Value in pairs(Table) do
+        FlipedTable[Value] = Key
+    end
+
+    return FlipedTable
+
+end
+
 return Table
