@@ -18,4 +18,18 @@ function Table.intersect(Table1 , Table2)
 
 end
 
+function Table.inTable(Variable , TableToCheck)
+
+    for Key,Value in pairs(TableToCheck) do
+        
+        if Value == Variable then
+            return true
+        end
+
+    end
+
+    return false
+
+end
+
 return Table
