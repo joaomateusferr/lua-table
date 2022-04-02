@@ -60,4 +60,20 @@ function Table.tableMerge(Table1, Table2)
     return MergedTable
 end
 
+function Table.tableFilter(Table)
+
+    local FilteredTable = {}
+    local Hash = {}
+
+    for Key,Value in ipairs(Table) do
+        if (not Hash[Value]) then
+            FilteredTable[#FilteredTable+1] = Value
+            Hash[Value] = true
+        end
+     
+     end
+  
+    return FilteredTable
+end
+
 return Table
