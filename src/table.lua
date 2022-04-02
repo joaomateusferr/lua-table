@@ -18,4 +18,33 @@ function Table.intersect(Table1 , Table2)
 
 end
 
+function Table.inTable(Variable , TableToCheck)
+
+    for Key,Value in pairs(TableToCheck) do
+        
+        if Value == Variable then
+            return true
+        end
+
+    end
+
+    return false
+
+end
+
+function Table.tableFlip(Table)
+
+    -- be careful when using this method
+    -- in lua table functions like "table.getn" for example do not work with associative tables
+
+    local FlipedTable = {}
+
+    for Key,Value in pairs(Table) do
+        FlipedTable[Value] = Key
+    end
+
+    return FlipedTable
+
+end
+
 return Table
