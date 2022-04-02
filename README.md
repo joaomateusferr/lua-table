@@ -1,2 +1,2 @@
-# lua-table
-Making lua tables easier.
+# Lua Utils
+Making lua easier.
