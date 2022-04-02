@@ -47,4 +47,17 @@ function Table.tableFlip(Table)
 
 end
 
+function Table.tableMerge(Table1, Table2)
+
+    local MergedTable = {}
+
+    MergedTable = Table1
+
+    for Key, Value in ipairs(Table2) do
+       table.insert(MergedTable, Value)
+    end 
+  
+    return MergedTable
+end
+
 return Table
