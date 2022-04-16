@@ -4,7 +4,7 @@ function Table.intersect(Table1 , Table2)
 
     local TableIntersect = {}
 
-    local FlipedTable = Utils.tableFlip(Table2)
+    local FlipedTable = Table.tableFlip(Table2)
 
     for Key,Value in pairs(Table1) do
 
